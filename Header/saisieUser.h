@@ -21,5 +21,4 @@
 */
 void saisir_sequence_couleurs(bool niveau, char saisie_user[]);
 
-
 #endif
