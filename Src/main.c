@@ -8,14 +8,6 @@ int main(int argc, char const *argv[])
     
     char secret_sequence[4];
     char saisie_user[4];
-
-    printf("R --> Red (Rouge)\n");
-    printf("G --> Green (Vert)\n");
-    printf("B --> Blue (Bleu)\n");
-    printf("C --> Cyan (Cyan)\n");
-    printf("Y --> Yellow (Jaune)\n");
-    printf("P --> Purple (Violet)\n");
-
     
     bool gagner = game(secret_sequence, saisie_user);
     
