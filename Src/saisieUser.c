@@ -8,6 +8,13 @@ void saisir_sequence_couleurs(bool niveau, char saisie_user[]){
 
     do
     {
+        printf("\nR --> Red (Rouge)\n");
+        printf("G --> Green (Vert)\n");
+        printf("B --> Blue (Bleu)\n");
+        printf("C --> Cyan (Cyan)\n");
+        printf("Y --> Yellow (Jaune)\n");
+        printf("P --> Purple (Violet)\n");
+        
         printf("\nChoisir 4 couleurs parmi celles citées ci-hautes:");
         scanf("%s", saisie_user);
         smallLetter_to_capitalLetter(saisie_user);
