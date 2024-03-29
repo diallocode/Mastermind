@@ -3,18 +3,21 @@
 
 bool game(char secret_sequence[], char user_sequence[]){
     int coutRestant = 10, geuss = 1;
-    int niveau = 0;
+    char niveau = ' ';
     bool mode = false;
     
     // Prevoir de faire une fonction pour une saisie d'un nombre valide
     printf("Choisissez un mode:\n");
-    printf("1- Mode facile\n");
-    printf("2- Mode dificile\n");
-    scanf("%d", &niveau);
+    printf("a- Mode facile\n");
+    printf("b- Mode dificile\n");
 
-    if(niveau == 2)
+    while (niveau != 'a' && niveau != 'b')
+    {
+        niveau = tolower(saisir_caractere());
+    }
+
+    if(niveau == 'b') 
         mode = true;
-
 
     randomSequenceGenerate(secret_sequence, mode);
     

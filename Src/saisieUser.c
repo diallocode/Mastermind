@@ -17,6 +17,7 @@ void saisir_sequence_couleurs(bool niveau, char saisie_user[]){
         
         printf("\nChoisir 4 couleurs parmi celles citées ci-hautes:");
         scanf("%s", saisie_user);
+
         smallLetter_to_capitalLetter(saisie_user);
 
         if(niveau){  // Si c'est le niveau difficille, on affiche pas de message d'erreur de doulons

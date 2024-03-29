@@ -6,7 +6,7 @@
 void chargeSequenceFromFile(char secret_sequence[]){
     
     // Read
-    FILE *file = fopen("/home/mamadou/Bureau/tech_dev/Master_Mind/techdev-mastermind-tanou_ahamat/Src/secret_sequence.txt", "r");
+    FILE *file = fopen("secret_sequence.txt", "r");
     if (file == NULL)
     {
         printf("Erreur: L'ouverture du fichier n'a pas reussi.\n");
@@ -35,12 +35,14 @@ void randomSequenceGenerate(char secret_sequence[], bool niveau){
     for (int i = 0; i < 4; i++)
         secret_sequence[i] = liste_couleurs[random_index()];
 
+    secret_sequence[4] = '\0';
+
     //Et si c'est niveau facile, alors on fait en sorte qu'il ait pas des doublons dans la sequence
     if(!niveau){
         while (double_couleur(secret_sequence))
         {
             for (int i = 0; i < 4; i++)
-            secret_sequence[i] = liste_couleurs[random_index()];
+                secret_sequence[i] = liste_couleurs[random_index()];
         }
         
     }
@@ -48,5 +50,5 @@ void randomSequenceGenerate(char secret_sequence[], bool niveau){
 }
 
 int random_index(){
-    return rand() % 6; // Génère un nombre entre 0 et 6
+    return rand() % 6; // Génère un nombre entre 0 et 5
 }

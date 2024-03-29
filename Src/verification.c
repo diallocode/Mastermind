@@ -1,5 +1,13 @@
 #include"../Header/verification.h"
 
+char saisir_caractere(){
+    char c;
+    scanf("%c", &c);
+
+    return c;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 bool est_saisie_valide(char sequence_couleurs[], bool niveau){
     int i = 0;
@@ -36,9 +44,8 @@ bool est_saisie_valide(char sequence_couleurs[], bool niveau){
 void smallLetter_to_capitalLetter(char mot_ecret[]){
     int i = 0;
     while(i < 4){
-        if(mot_ecret[i] >= 'a'){
-            (mot_ecret[i]) += (mot_ecret[i]) - 32; // 'a'-'A' = 32
-            }
+        
+        mot_ecret[i] = mot_ecret[i] - 32; 
         i++;
     }
 }
@@ -46,13 +53,12 @@ void smallLetter_to_capitalLetter(char mot_ecret[]){
 /*----------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 bool double_couleur(char sequence_couleurs[]){
-    int taille = strlen(sequence_couleurs);
     int compteur = 0;
 
-    for (int i = 0; i < taille; i++)
+    for (int i = 0; i < 4; i++)
     {
         compteur = 0;
-        for (int j = 0; j < taille; j++)
+        for (int j = 0; j < 4; j++)
         {
             if(sequence_couleurs[i] == sequence_couleurs[j])        
                 compteur ++;
