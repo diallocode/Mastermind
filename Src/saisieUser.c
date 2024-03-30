@@ -20,29 +20,24 @@ void saisir_sequence_couleurs(bool niveau, char saisie_user[]){
 
         smallLetter_to_capitalLetter(saisie_user);
 
-        if(niveau){  // Si c'est le niveau difficille, on affiche pas de message d'erreur de doulons
+        printf("Chaine : %s\n", saisie_user);
+
+        if(double_couleur(saisie_user) || !est_saisie_valide(saisie_user, niveau)){
+
             if(!est_saisie_valide(saisie_user, niveau))
             {
-                printf("Saisie Erronée: ");
-                printf("Veuillez saisir 4 couleurs qui correspondesnt aux lettres ci-haut\n");
+                printf("\nSaisie Erronée: ");
+                printf("Veuillez saisir 4 couleurs qui correspondesnt aux lettres ci-hautes\n");
             }
-        }
 
-        else{
-            if(double_couleur(saisie_user) || !est_saisie_valide(saisie_user, niveau))
-            {
-                printf("Saisie Erronée: ");
-
-                if(double_couleur(saisie_user))
-                    printf("Y a des doublons de couleurs\n");
-
-                else
-                    printf("Veuillez saisir 4 couleurs qui correspondesnt aux lettres ci-haut\n");
+            if(!niveau){  // Si c'est le niveau facile, on affiche les messages d'erreurs de doulons
+                if(double_couleur(saisie_user)){
+                    printf("\nSaisie Erronée: ");
+                    printf("Y a des doublons de couleur dans la séquence saisie\n");
+                }
             }
         }
 
     } while(!est_saisie_valide(saisie_user, niveau)); 
 }
-
-
 

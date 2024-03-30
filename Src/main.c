@@ -40,7 +40,7 @@ int main(int argc, char const *argv[])
     }
     
 
-    printf("A Bientôt§\n");
+    printf("A Bientôt!\n");
 
     return 0;
 }
