@@ -5,12 +5,12 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include<string.h>
+#include<ctype.h>
 
 
 bool est_saisie_valide(char sequence_couleurs[], bool niveau);
-
 void smallLetter_to_capitalLetter(char mot_ecret[]);
-
+char saisir_caractere();
 
 /**
  * \brief Une fonction qui vérifie si y a des doublons ou pas des couleurs
@@ -18,5 +18,6 @@ void smallLetter_to_capitalLetter(char mot_ecret[]);
  * \return un booléen qui vaut vrai si y a des doublons et faux sinon.
 */
 bool double_couleur(char sequence_couleur[]);
+
 
 #endif
