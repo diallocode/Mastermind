@@ -2,10 +2,10 @@
 #define __GAME_H__
 
 #include<stdbool.h>
-#include"../Header/saisieUser.h"
-#include"../Header/chevilles.h"
-#include"../Header/chargement_sequence.h"
-#include"../Header/verification.h"
+#include"../include/saisieUser.h"
+#include"../include/chevilles.h"
+#include"../include/chargement_sequence.h"
+#include"../include/verification.h"
 
 bool game(char secret_sequence[], char user_sequence[]);
 

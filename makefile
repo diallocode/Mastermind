@@ -3,7 +3,7 @@ CFLAGS = -Wall -Iinclude
 SRC_DIR = src
 OBJ_DIR = obj
 BIN_DIR = bin
-EXECUTABLE = $(BIN_DIR)/executable
+EXECUTABLE = $(BIN_DIR)/main
 
 # Définir les répertoires dans lesquels Make doit rechercher les fichiers sources
 vpath %.c $(SRC_DIR)
@@ -22,13 +22,7 @@ $(EXECUTABLE): $(OBJS) | $(BIN_DIR)
 $(OBJ_DIR)/%.o: %.c | $(OBJ_DIR)
 	$(CC) $(CFLAGS) -c $< -o $@
 
-$(OBJ_DIR):
-	mkdir -p $(OBJ_DIR)
-
-$(BIN_DIR):
-	mkdir -p $(BIN_DIR)
 
 clean:
-	rm -rf $(OBJ_DIR) $(BIN_DIR)
-
+	rm -rf $(OBJ_DIR)/*.o $(BIN_DIR)/main
 

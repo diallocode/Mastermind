@@ -1,5 +1,5 @@
-#include"../Header/saisieUser.h"
-#include"../Header/verification.h"
+#include"../include/saisieUser.h"
+#include"../include/verification.h"
 
 
 void saisir_sequence_couleurs(bool niveau, char saisie_user[]){
@@ -19,8 +19,6 @@ void saisir_sequence_couleurs(bool niveau, char saisie_user[]){
         scanf("%s", saisie_user);
 
         smallLetter_to_capitalLetter(saisie_user);
-
-        printf("Chaine : %s\n", saisie_user);
 
         if(double_couleur(saisie_user) || !est_saisie_valide(saisie_user, niveau)){
 

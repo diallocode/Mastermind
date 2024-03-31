@@ -1,5 +1,5 @@
-#include "../Header/chargement_sequence.h"
-#include"../Header/verification.h"
+#include "../include/chargement_sequence.h"
+#include"../include/verification.h"
 
 
 // version simplifié qui permet juste de lire une combinaison sur la 1ère ligne du fichier

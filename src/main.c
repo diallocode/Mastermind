@@ -1,5 +1,5 @@
-#include"../Header/game.h"
-#include"../Header/chargement_sequence.h"
+#include"../include/game.h"
+#include"../include/chargement_sequence.h"
 #include<time.h>
 
 int main(int argc, char const *argv[])

@@ -1,4 +1,4 @@
-#include"../Header/game.h"
+#include"../include/game.h"
 
 
 bool game(char secret_sequence[], char user_sequence[]){
@@ -32,6 +32,7 @@ bool game(char secret_sequence[], char user_sequence[]){
     {
         printf("\nSaissez la séquence secrete\n");
         saisir_sequence_couleurs(mode, secret_sequence);
+        system("clear");
     }
 
     else
