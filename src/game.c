@@ -1,4 +1,5 @@
 #include"../include/game.h"
+#include"../lib/include/color.h"
 
 
 bool game(char secret_sequence[], char user_sequence[]){

@@ -1,0 +1,1 @@
+void print_color_text(char text[], char color);

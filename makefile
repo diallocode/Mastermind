@@ -1,5 +1,7 @@
 CC = gcc
 CFLAGS = -Wall -Iinclude
+LDFLAGS = -Llib/lib
+LIBS = -lcolor
 SRC_DIR = src
 OBJ_DIR = obj
 BIN_DIR = bin
@@ -17,12 +19,10 @@ OBJS = $(addprefix $(OBJ_DIR)/, $(SRCS:.c=.o))
 all: $(EXECUTABLE)
 
 $(EXECUTABLE): $(OBJS) | $(BIN_DIR)
-	$(CC) $(CFLAGS) $^ -o $@
+	$(CC) $(CFLAGS) $^ -o $@ $(LDFLAGS) $(LIBS)
 
 $(OBJ_DIR)/%.o: %.c | $(OBJ_DIR)
 	$(CC) $(CFLAGS) -c $< -o $@
 
-
 clean:
 	rm -rf $(OBJ_DIR)/*.o $(BIN_DIR)/main
-

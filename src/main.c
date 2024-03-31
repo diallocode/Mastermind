@@ -1,6 +1,7 @@
 #include"../include/game.h"
 #include"../include/chargement_sequence.h"
 #include<time.h>
+#include"../lib/include/color.h"
 
 int main(int argc, char const *argv[])
 {
@@ -20,9 +21,9 @@ int main(int argc, char const *argv[])
         gagner = game(secret_sequence, saisie_user);
         
         if(gagner)
-            printf("Bravo! vous avez gagné\n");
+            print_color_text("Bravo! vous avez gagné\n", 'G');
         else
-            printf("Désolé, vous avez perdu(e), vous pouvez faire mieux la prochaine fois.\n");    
+            print_color_text("Désolé, vous avez perdu(e), vous pouvez faire mieux la prochaine fois.\n", 'R');
 
         printf("Voulez vous relancer le jeu(Y/N)?");
 

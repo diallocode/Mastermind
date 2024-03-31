@@ -1,5 +1,6 @@
 #include"../include/saisieUser.h"
 #include"../include/verification.h"
+#include"../code_bibliotheque/include/color.h"
 
 
 void saisir_sequence_couleurs(bool niveau, char saisie_user[]){
@@ -24,14 +25,14 @@ void saisir_sequence_couleurs(bool niveau, char saisie_user[]){
 
             if(!est_saisie_valide(saisie_user, niveau))
             {
-                printf("\nSaisie Erronée: ");
-                printf("Veuillez saisir 4 couleurs qui correspondesnt aux lettres ci-hautes\n");
+                print_color_text("\nSaisie Erronée: ", 'R');
+                print_color_text("Veuillez saisir 4 couleurs qui correspondesnt aux lettres ci-hautes\n", 'R');
             }
 
             if(!niveau){  // Si c'est le niveau facile, on affiche les messages d'erreurs de doulons
                 if(double_couleur(saisie_user)){
-                    printf("\nSaisie Erronée: ");
-                    printf("Y a des doublons de couleur dans la séquence saisie\n");
+                    print_color_text("\nSaisie Erronée: ", 'R');
+                    print_color_text("Y a des doublons de couleur dans la séquence saisie\n", 'R');
                 }
             }
         }
