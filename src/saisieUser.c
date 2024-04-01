@@ -1,6 +1,6 @@
-#include"../include/saisieUser.h"
-#include"../include/verification.h"
-#include"../code_bibliotheque/include/color.h"
+#include"saisieUser.h"
+#include"verification.h"
+#include"../lib/include/color.h"
 
 
 void saisir_sequence_couleurs(bool niveau, char saisie_user[]){
@@ -9,34 +9,42 @@ void saisir_sequence_couleurs(bool niveau, char saisie_user[]){
 
     do
     {
-        printf("\nR --> Red (Rouge)\n");
-        printf("G --> Green (Vert)\n");
-        printf("B --> Blue (Bleu)\n");
-        printf("C --> Cyan (Cyan)\n");
-        printf("Y --> Yellow (Jaune)\n");
-        printf("P --> Purple (Violet)\n");
+        print_color_text("\nR ", 'R'); printf("--> "); print_color_text("Red (Rouge)\n", 'R');
+        print_color_text("G ", 'G'); printf("--> "); print_color_text("Green (Vert)\n", 'G');
+        print_color_text("B ", 'B'); printf("--> "); print_color_text("Blue (Bleu)\n", 'B');;
+        print_color_text("C ", 'C'); printf("--> "); print_color_text("Cyan (Cyan)\n", 'C');
+        print_color_text("Y ", 'Y'); printf("--> "); print_color_text("Yellow (Jaune)\n", 'Y');
+        print_color_text("P ", 'P'); printf("--> "); print_color_text("Purple (Violet)\n", 'P');
         
         printf("\nChoisir 4 couleurs parmi celles citées ci-hautes:");
-        scanf("%s", saisie_user);
-
+        saisir(saisie_user, 6);
         smallLetter_to_capitalLetter(saisie_user);
 
-        if(double_couleur(saisie_user) || !est_saisie_valide(saisie_user, niveau)){
+        if(!niveau){ // Si c'est le niveau facile, on gére les messages d'erreurs de doulons
 
-            if(!est_saisie_valide(saisie_user, niveau))
-            {
-                print_color_text("\nSaisie Erronée: ", 'R');
-                print_color_text("Veuillez saisir 4 couleurs qui correspondesnt aux lettres ci-hautes\n", 'R');
-            }
 
-            if(!niveau){  // Si c'est le niveau facile, on affiche les messages d'erreurs de doulons
-                if(double_couleur(saisie_user)){
-                    print_color_text("\nSaisie Erronée: ", 'R');
-                    print_color_text("Y a des doublons de couleur dans la séquence saisie\n", 'R');
+            if(!est_saisie_valide(saisie_user, niveau)){
+                if(double_couleur(saisie_user)){ 
+                    print_color_text("\nSaisie Erronée:\n", 'R');
+                    print_color_text("- séquence incorrecte, y a des doublons et des couleurs inconnues\n", 'R');
+                    print_color_text("- Veuillez saisir 4 couleurs qui correspondent aux lettres ci-hautes\n", 'R');
                 }
+
+                else{
+                    print_color_text("\nSaisie Erronée:\n", 'R');
+                    print_color_text("- séquence incorrecte, y a des couleurs inconnues\n", 'R');
+                    print_color_text("- Veuillez saisir 4 couleurs qui correspondent aux lettres ci-hautes\n", 'R');
+                }
+            }
+        }
+
+        else
+        {
+            if(!est_saisie_valide(saisie_user, niveau)){
+                print_color_text("- séquence incorrecte, y a des couleurs inconnues\n", 'R');
+                print_color_text("- Veuillez saisir 4 couleurs qui correspondesnt aux lettres ci-hautes\n", 'R');
             }
         }
 
     } while(!est_saisie_valide(saisie_user, niveau)); 
 }
-

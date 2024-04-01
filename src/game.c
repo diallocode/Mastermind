@@ -1,4 +1,4 @@
-#include"../include/game.h"
+#include"game.h"
 #include"../lib/include/color.h"
 
 
@@ -16,17 +16,21 @@ bool game(char secret_sequence[], char user_sequence[]){
     while (niveau != 'a' && niveau != 'b')
     {
         niveau = tolower(saisir_caractere());
+        if(niveau != 'a' && niveau != 'b')
+            print_color_text("\nVeuillez saisir a ou b\n", 'R');
     }
 
     if(niveau == 'b') 
         mode = true;
 
-    printf("Voulez vous jouer en solo ou en duel:\n");
+    printf("\nVoulez vous jouer en solo ou en duel:\n");
     printf("a- en solo\n");
     printf("b- en duel\n");
     while (solo_duel != 'a' && solo_duel != 'b')
     {
         solo_duel = tolower(saisir_caractere());
+        if(solo_duel != 'a' && solo_duel != 'b')
+            print_color_text("\nVeuillez saisir a ou b\n", 'R');
     }
 
     if(solo_duel == 'b') // si on veut jouer en duel, un joueur saisit la séquence secrete et l'autre devine
@@ -51,7 +55,7 @@ bool game(char secret_sequence[], char user_sequence[]){
 
         saisir_sequence_couleurs(mode, user_sequence);
 
-        printf("|    %d   | BRYC  | black: %d, white: %d |\n", geuss, brocheNoir(secret_sequence, user_sequence), brocheBlanche(secret_sequence, user_sequence));
+        printf("|    %d   | %s  | black: %d, white: %d |\n", geuss, user_sequence, brocheNoir(secret_sequence, user_sequence), brocheBlanche(secret_sequence, user_sequence));
 
         coutRestant--;
         geuss++;

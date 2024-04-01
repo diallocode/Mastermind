@@ -1,5 +1,5 @@
 
-#include "../include/chevilles.h"
+#include "chevilles.h"
 
 
 // Nombres de couleurs correctes ET bien placées 
@@ -14,6 +14,8 @@ int brocheNoir(char ser[], char sequenc[]){
     }
     return Noirs;
 }
+
+/*--------------------------------------------------------------------*/
 
 // Nombre de couleurs présentes dans la séquence mais mal placées
 int brocheBlanche(char ser[], char sequence[]){

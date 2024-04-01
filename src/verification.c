@@ -1,10 +1,11 @@
-#include"../include/verification.h"
+#include"verification.h"
 
 char saisir_caractere(){
-    char c;
-    scanf("%c", &c);
-
-    return c;
+    char caractere[2];
+    if(saisir(caractere,2))
+        return caractere[0];
+    else
+        return ' ';
 }
 
 /*-------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -57,3 +58,30 @@ bool double_couleur(char sequence_couleurs[]){
     return false; // Aucun doublon trouvé
 }
 
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+int saisir(char sequence[], int taille) {
+    char *entree = NULL;
+    
+    if (fgets(sequence, taille, stdin) != NULL) {
+        entree = strchr(sequence, '\n');
+        if (entree != NULL)
+            *entree = '\0';
+        else { 
+            // Vérifier si le buffer est déjà vide
+            if (!feof(stdin)) {
+                // Vider le buffer
+                while (getchar() != '\n');
+            }
+        }
+        return 1;
+    }
+    else {
+        // Vérifier si le buffer est déjà vide
+        if (!feof(stdin)) {
+            // Vider le buffer
+            while (getchar() != '\n');
+        }
+        return 0;
+    }
+}

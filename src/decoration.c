@@ -1,4 +1,4 @@
-#include "../include/decoration.h"
+#include "decoration.h"
 
 // Sans couleur
 void decoreApp1(){
