@@ -13,6 +13,10 @@ int main(int argc, char const *argv[])
     char reponse = ' ';
     bool gagner = false;
     
+    int cheville_noire[10];
+    int cheville_blanche[10];
+    int guesses[10];
+    char sequences[10][5];
 
     while (game_continue)
     {
@@ -26,7 +30,7 @@ int main(int argc, char const *argv[])
             
         
         
-        gagner = game(secret_sequence, saisie_user);
+        gagner = game(secret_sequence, saisie_user, cheville_blanche, cheville_noire, sequences, guesses);
         
         if(gagner)
             print_color_text("BRAVO! VOUS AVEZ GAGNÉ(E)\n", 'G');
