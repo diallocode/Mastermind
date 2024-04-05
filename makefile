@@ -1,4 +1,4 @@
-CC = gcc
+CC = gcc -g
 CFLAGS = -Wall -Iinclude
 LDFLAGS = -Llib/lib
 LIBS = -lcolor
@@ -23,6 +23,8 @@ $(EXECUTABLE): $(OBJS) | $(BIN_DIR)
 
 $(OBJ_DIR)/%.o: %.c | $(OBJ_DIR)
 	$(CC) $(CFLAGS) -c $< -o $@
+zip:
+	tar -czf master_mind.tar.gz SRC_DIR OBJ_DIR BIN_DIR EXECUTABLE
 
 clean:
 	rm -rf $(OBJ_DIR)/*.o $(BIN_DIR)/main
