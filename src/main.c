@@ -2,6 +2,7 @@
 #include"chargement_sequence.h"
 #include<time.h>
 #include"../lib/include/color.h"
+#include"score.h"
 
 int main(int argc, char const *argv[])
 {
@@ -12,22 +13,20 @@ int main(int argc, char const *argv[])
     bool game_continue = true;
     char reponse = ' ';
     bool gagner = false;
-    
 
     while (game_continue)
     {
         reponse = ' ';
-        
         // initialiser la séquence de l'utilisateur et la sequence secrete.
         for (int i = 0; i < 6; i++){
             secret_sequence[i] = ' ';
             saisie_user[i] = ' ';
         }
             
-        
-        
+
+            
         gagner = game(secret_sequence, saisie_user);
-        
+            
         if(gagner)
             print_color_text("BRAVO! VOUS AVEZ GAGNÉ(E)\n", 'G');
         else
@@ -35,22 +34,23 @@ int main(int argc, char const *argv[])
 
         printf("Voulez vous relancer le jeu(Y/N)?");
 
-        
+            
         while (reponse != 'Y' && reponse != 'N')
         {
-            
+                
             reponse = toupper(saisir_caractere());
             if(reponse != 'Y' && reponse != 'N')
             print_color_text("\nVeuillez saisir Y ou N\n", 'R');
         }
-        
+            
+
+
         if(reponse == 'N')
             game_continue = false;
+            
         system("clear");
-
     }
-    
-
+        
     printf("A Bientôt!\n");
 
     return 0;

@@ -6,6 +6,8 @@
 #include"chevilles.h"
 #include"chargement_sequence.h"
 #include"verification.h"
+#include<string.h>
+#include "score.h"
 
 bool game(char secret_sequence[], char user_sequence[]);
 
