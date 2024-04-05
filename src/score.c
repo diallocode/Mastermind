@@ -2,7 +2,7 @@
 
 
 int lire_score(Score score[]){
-    FILE *file = fopen("/home/mahamat/COurs/S3/TEC_DEV/projet_master_mind/techdev-mastermind-tanou_ahamat/src/score.txt", "r");
+    FILE *file = fopen("src/score.txt", "r");
 
     if(file == NULL){
         printf("Erreur: l'ouverture du fichier à échouer\n");
@@ -37,7 +37,7 @@ void save_score(Score s){
     Score scores[SCORE_MAX];
     int nombre_scores_lus = lire_score(scores); // récuperer les scores
 
-    FILE *file = fopen("/home/mahamat/COurs/S3/TEC_DEV/projet_master_mind/techdev-mastermind-tanou_ahamat/src/score.txt", "w");
+    FILE *file = fopen("src/score.txt", "w");
     if(file == NULL){
         print_color_text("Erreur: L'ouverture du fichier à échouer\n", 'R');
         exit(EXIT_FAILURE);
@@ -45,7 +45,7 @@ void save_score(Score s){
 
 
     int index = present_user(scores, s.nom);
-    if(index != -1)  // Si l'utilisateur prénsent, on remplace juste son ancien score
+    if(index != -1)  // Si l'utilisateur présent, on remplace juste son ancien score
         scores[index].score = s.score;
 
     else{

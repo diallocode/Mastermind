@@ -59,7 +59,9 @@ bool game(char secret_sequence[], char user_sequence[]){
 
         if(solo_duel == 'b') // si on veut jouer en duel, un joueur saisit la séquence secrete et l'autre devine
         {
-            printf("\nSaissez la séquence secrete\n");
+            print_color_text("\nPrincipe :",'R');
+            printf("Un joueur entre une sequence secrète et le second tente de la deviner.\n");
+            printf("Entrez une séquence secrete \n");
             saisir_sequence_couleurs(mode, secret_sequence);
             system("clear");
         }
@@ -102,18 +104,10 @@ bool game(char secret_sequence[], char user_sequence[]){
 
     else if(score_ou_jouer == 'b')
     {
-<<<<<<< HEAD
-        print_color_text("\nPrincipe :",'R');
-        printf("Un joueur entre une sequence secrète et le second tente de la deviner.\n");
-        printf("Entrez une séquence secrete \n");
-        saisir_sequence_couleurs(mode, secret_sequence);
-        system("clear");
-=======
         Score scores[SCORE_MAX];
         int nombre_score = lire_score(scores);
         print_score(scores, nombre_score);
         exit(EXIT_SUCCESS);
->>>>>>> 68faf22dc27791f8975b8b16e74d5795868257a2
     }
 
     else

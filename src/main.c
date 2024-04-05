@@ -3,6 +3,7 @@
 #include<time.h>
 #include"../lib/include/color.h"
 #include"score.h"
+#include"decoration.h"
 
 int main(int argc, char const *argv[])
 {
@@ -16,6 +17,7 @@ int main(int argc, char const *argv[])
 
     while (game_continue)
     {
+        decoreApp2();
         reponse = ' ';
         // initialiser la séquence de l'utilisateur et la sequence secrete.
         for (int i = 0; i < 6; i++){
