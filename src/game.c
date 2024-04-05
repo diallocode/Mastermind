@@ -2,8 +2,8 @@
 #include"../lib/include/color.h"
 
 
-bool game(char secret_sequence[], char user_sequence[]){
-    int coutRestant = 10, geuss = 1;
+bool game(char secret_sequence[], char user_sequence[], int cheville_blanche[10], int cheville_noire[10], char sequences[10][5], int geusses[10]){
+    int coutRestant = 10, guess = 1;
     char niveau = ' ';
     bool mode = false;
     char solo_duel = ' ';
@@ -46,20 +46,29 @@ bool game(char secret_sequence[], char user_sequence[]){
     
     printf("\nC'est parti vous avez %d essayes.\n", coutRestant);
     
-    
-
-    printf("| guess # | guess | result               |\n");
-    printf("| ------- | ----- | -------------------- |\n");    
+    int i = 0;
     while (coutRestant > 0 && brocheNoir(secret_sequence, user_sequence) != 4)
     {
-
         saisir_sequence_couleurs(mode, user_sequence);
+        cheville_noire[i] = brocheNoir(secret_sequence, user_sequence);
+        cheville_blanche[i] = brocheBlanche(secret_sequence, user_sequence);
+        strcpy(sequences[i], user_sequence);
+        geusses[i] = guess;
 
-        printf("|    %d   | %s  | black: %d, white: %d |\n", geuss, user_sequence, brocheNoir(secret_sequence, user_sequence), brocheBlanche(secret_sequence, user_sequence));
-
+        printf("| guess # | guess | result               |\n");
+        printf("| ------- | ----- | -------------------- |\n");
+        for (int j = 0; j <= i; j++)
+        {
+            
+            printf("|    %d    | %s   | black: %d, white: %d  |\n", geusses[j], sequences[j], cheville_noire[j], cheville_blanche[j]);    
+        }
+        
         coutRestant--;
-        geuss++;
+        guess++;
+        i++;
     }
+
+    i = 0;
 
     return coutRestant > 0;
 }
