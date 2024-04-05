@@ -11,6 +11,4 @@ void decoreApp1();
 
 void decoreApp2();
 
-void decore();
-
 #endif
