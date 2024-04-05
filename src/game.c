@@ -35,7 +35,9 @@ bool game(char secret_sequence[], char user_sequence[]){
 
     if(solo_duel == 'b') // si on veut jouer en duel, un joueur saisit la séquence secrete et l'autre devine
     {
-        printf("\nSaissez la séquence secrete\n");
+        print_color_text("\nPrincipe :",'R');
+        printf("Un joueur entre une sequence secrète et le second tente de la deviner.\n");
+        printf("Entrez une séquence secrete \n");
         saisir_sequence_couleurs(mode, secret_sequence);
         system("clear");
     }
