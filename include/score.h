@@ -46,11 +46,11 @@ void print_score(Score score[], int taille);
 void save_score(Score s);
 
 /**
- * \brief Une fonction qui détermine l'index du plus petit score de la liste de score.
+ * \brief Une fonction qui détermine le score le plus petit de la liste de score.
  * \param[in] scores un tableau de scores
- * \return index du minimum de score
+ * \return minimum des score
 */
-int index_minimum(Score scores[]);
+int minimum_score(Score scores[]);
 
 /**
  * \brief Une fonction qui détermine le minimum de deux nombres

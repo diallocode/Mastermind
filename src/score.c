@@ -57,9 +57,10 @@ void save_score(Score s){
     else{
         
         if(nombre_scores_lus == SCORE_MAX){ // si on a trois scores dans le fichier, on écraser le plus petit
-            int index_minimum_score = index_minimum(scores);
-
-            scores[index_minimum_score] = s;
+            int min_score = minimum_score(scores);
+            for(int i = 0; i < SCORE_MAX; i++)
+                if(scores[i].score == min_score)
+                    scores[i] = s;
         }
 
         else{ //sinon, on a de la place dans le fichier, on met juste le nouveau score
@@ -90,7 +91,7 @@ int present_user(Score scores[], char nom[]){
 
 /*------------------------------------------------------------------------------------------------------------------------*/
 
-int index_minimum(Score scores[]){
+int minimum_score(Score scores[]){
     return minimum(minimum(scores[0].score, scores[1].score), scores[2].score);
 }
 
