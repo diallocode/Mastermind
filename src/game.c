@@ -1,3 +1,8 @@
+/**
+ * \file game.c
+ * \brief Contient le code de la fonction qui permet de lancer une partie du jeu mastermind
+*/
+
 #include"game.h"
 #include"../lib/include/color.h"
 

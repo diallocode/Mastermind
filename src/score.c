@@ -1,3 +1,9 @@
+/**
+ * \file score.c
+ * \brief Contient les codes des fonctions qui permettent de gerer le score d'un joueur
+*/
+
+
 #include"score.h"
 
 

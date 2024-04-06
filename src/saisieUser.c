@@ -1,3 +1,8 @@
+/**
+ * \file saisi_utilisateur.c
+ * \brief Contient le code de la fonction qui permet au joueur d'entrez une sequence de couleurs
+*/
+
 #include"saisieUser.h"
 #include"verification.h"
 #include"../lib/include/color.h"

@@ -1,3 +1,8 @@
+/**
+ * \file main.c
+ * \brief Fonction principale du jeu
+*/
+
 #include"game.h"
 #include"chargement_sequence.h"
 #include<time.h>
@@ -17,7 +22,7 @@ int main(int argc, char const *argv[])
 
     while (game_continue)
     {
-        decoreApp2();
+        decoreApp();
         reponse = ' ';
         // initialiser la séquence de l'utilisateur et la sequence secrete.
         for (int i = 0; i < 6; i++){

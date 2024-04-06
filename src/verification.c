@@ -1,3 +1,8 @@
+/**
+ * \file verification.c
+ * \brief Contient les codes sources des fonctions qui permettent de verifier la validité d'une sequence de couleur
+*/
+
 #include"verification.h"
 
 char saisir_caractere(){

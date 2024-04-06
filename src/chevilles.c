@@ -1,13 +1,17 @@
+/**
+ * \file chevilles.c
+ * \brief Contient les codes des fonctions chevilles(blanches et noirs)
+*/
 
 #include "chevilles.h"
 
 
 // Nombres de couleurs correctes ET bien placées 
-int brocheNoir(char ser[], char sequenc[]){
+int brocheNoir(char secret[], char sequence[]){
     int Noirs = 0;
     int i = 0;
     while(i < 4){
-        if(ser[i] == sequenc[i]){
+        if(secret[i] == sequence[i]){
             Noirs++;
         }
         i++;
@@ -18,14 +22,14 @@ int brocheNoir(char ser[], char sequenc[]){
 /*--------------------------------------------------------------------*/
 
 // Nombre de couleurs présentes dans la séquence mais mal placées
-int brocheBlanche(char ser[], char sequence[]){
-    if(brocheNoir(ser, sequence) == 4)
+int brocheBlanche(char secret[], char sequence[]){
+    if(brocheNoir(secret, sequence) == 4)
         return 0;
         
     int Blanches = 0;
     for(int i = 0; i < 4; i++){
         for(int j = 0; j < 4; j++){
-            if(ser[i]  == sequence[j] && i != j)
+            if(secret[i]  == sequence[j] && i != j)
                 Blanches++;
         }
     }

@@ -1,3 +1,8 @@
+/**
+ * \file chargement_sequence.c
+ * \brief Contient les codes des fonctions qui permettent d'obtenir une sequence secrete
+*/
+
 #include "chargement_sequence.h"
 #include"verification.h"
 
