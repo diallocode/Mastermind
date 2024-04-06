@@ -1,3 +1,8 @@
+/**
+ * \file main.c
+ * \brief Contient la fonction principale de la bibliothèque
+*/
+
 #include"../include/color.h"
 
 

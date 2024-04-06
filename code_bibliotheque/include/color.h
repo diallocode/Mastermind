@@ -1,3 +1,7 @@
+/**
+ * \file color.h
+ * \brief Contient le prototype de la bibliothèque
+*/
 #ifndef __COLOR_H__
 #define __COLOR_H__
 

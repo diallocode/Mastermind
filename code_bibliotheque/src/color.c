@@ -1,3 +1,8 @@
+/**
+ * \file color.c
+ * \brief Contient le code source de la bibliothèque
+*/
+
 #include"../include/color.h"
 
 void print_color_text(char text[], char color){
