@@ -26,5 +26,8 @@ $(OBJ_DIR)/%.o: %.c | $(OBJ_DIR)
 zip:
 	tar -czf master_mind.tar.gz SRC_DIR OBJ_DIR BIN_DIR EXECUTABLE
 
+doc:
+	doxygen Doxyfile
+
 clean:
 	rm -rf $(OBJ_DIR)/*.o $(BIN_DIR)/main
