@@ -7,6 +7,8 @@ Pour jouer, lancez le terminal depuis le répertoire **techdev-mastermind-tanou_
     techdev-mastermind-tanou_ahamat$ make
     techdev-mastermind-tanou_ahamat$ bin/main
 
+Le lancement d'une partie ou d'une nouvelle partie permet la mise à jour automatique de la sequence_secrete.
+
 ## MANUEL DU DEVELOPPEUR
 ### Architecture 
 Le projet est organisé en different dossier qui sont : 
@@ -30,8 +32,17 @@ Pour vérifier les fuites mémoires, utilisez la commande __valgring__ suivit de
 
     techdev-mastermind-tanou_ahamat$ valgrind --leak-check=full bin/main
 
-### Contribution 
-Pour contribuer au projet, veillez à placer vos codes source dans le dossier __src__ et leurs prototypes dans __include__. Si votre contribution nécessite une nouvelle bibliothèque, ajoutez la bibliothèque dans __lib/lib__ et le prototype dans __lib/include__.
+## Contribution 
+### Rapporter des Bugs et Suggestion d'Améliorations__ 
+- __Bugs__ : Si vous découvrez un bug, veuillez le signaler en créant une nouvelle issue, en fournissant une description claire du bug.
+- __Amélioration__ : Pour proposer une amélioration, ouvrez une issue pour en discuter. Votre feedback est précieux pour rendre le jeu meilleur pour tous.
+### Participer au Développement
+- __Nouvelle_fonctionnalité__ :
+    1. Creez votre branche de fonctionnalité.
+    2. Assurez-vous que votre fonctionnalité à la même architecture que le projet.
+    3. Tester et documentez votre code et verifiez qu'il ne comporte aucun bugs.
+    4. Soumettez votre branche et ouvrir un Pull request avec une description claire de votre fonctionnalité.
+    5. Mettez a jour la documentation.
 
 ### Divers
 Utilisez les commandes suivantes depuis le répertoire __techdev-mastermind-tanou_ahamat__ 
@@ -59,5 +70,10 @@ Nous avons privilégié une architecture modulaire, découpant le projet en fonc
 ### Fonctionalités supplémentaires
 
 - __Mode deux joueurs__: Un joueur saisit une séquence que l'autre tente de deviner.
-- __Gestion des scores__ : Le prénom du joueur et son score sont enregistrés dans un fichier. Seuls les trois meilleurs scores sont conservés.
+- __Gestion des scores__ : Le prénom du joueur et son score sont enregistrés dans le __src/score.txt__. Seuls les trois meilleurs scores sont conservés.
 
+
+
+
+Equipe de developpement :
+**Diallo Mamadou Tanou** et **Mahamat Salet Ahmat**
