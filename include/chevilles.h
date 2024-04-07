@@ -26,5 +26,4 @@ int brocheNoir(char ser[], char sequence[]);
 */
 int brocheBlanche(char secret[], char sequence[]);
 
-
 #endif

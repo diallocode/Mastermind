@@ -100,7 +100,7 @@ bool game(char secret_sequence[], char user_sequence[]){
         }
         i = 0;
 
-        if(niveau) // si c'est niveau difficile, on multiplie le score par 2
+        if(mode) // si c'est niveau difficile, on multiplie le score par 2
             coutRestant *= 2;
         s.score = coutRestant;
         save_score(s);  // Sauvegarder le score

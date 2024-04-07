@@ -33,4 +33,10 @@ void randomSequenceGenerate(char secret_sequence[], bool niveau);
 */
 int random_index();
 
+/**
+ * \brief Une fonction qui compte le nombre de séquence dans un fichhier
+ * \return le nombre de séquence dans le fichier
+*/
+int nomber_sequence_in_file();
+
 #endif
