@@ -44,24 +44,23 @@ Pour vérifier les fuites mémoires, utilisez la commande __valgring__ suivit de
     4. Soumettez votre branche et ouvrir un Pull request avec une description claire de votre fonctionnalité.
     5. Mettez a jour la documentation.
 
-### Divers
+## Divers
 Utilisez les commandes suivantes depuis le répertoire __techdev-mastermind-tanou_ahamat__ 
 
 - __make zip__ : Créer une archive du projet
 - __make clean__ : Supprimer les fichiers objets, l'exécutable et dossiers de documentation générés.
 - __make doc__: Générer la documentation.
 
+**NB** : la documentation est générer dans le dossier __docs__ sous format **html**
+- __html__ : Naviguez vers le dossier __docs/html__ puis ouvrez le fichier **index.html** dans un navigateur web pour acceder a la documentation
 
 ## RAPPORT DU PROJET
 Nous avons tenu une réunion pour décider de la répartition des tâches. Le développement s'est fait en utilisant des branches parallèles pour chaque nouvelle fonctionnalité ou correction. Chaque fonctionnalité développée était soumise à une vérification par un collègue avant d'être fusionnée à la branche principale.
 
 ### Défis rencontrés
 - Générer une séquence de couleurs aléatoire sans doublons a conduit à une boucle infinie, corrigée grâce à  __gdb__.
-
 - La gestion des conflits git était parfois complexe mais on a toujours pu les résoudres grace a la commande __help__.
-
 - Nous avons des doutes sur l'optimisation de notre code et pensons qu'il pourrait être amélioré.
-
 - L'utilisation d'un appel système pour nettoyer le terminal(__clear__)  n'est pas compatible avec tous les systèmes d'exploitation, limitant l'utilisation à Linux.
 
 ### Choix de conception
