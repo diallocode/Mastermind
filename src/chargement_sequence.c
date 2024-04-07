@@ -11,7 +11,7 @@ void chargeSequenceFromFile(char secret_sequence[], bool niveau) {
     static int compteur = 1;
     int nombre_sequence = nomber_sequence_in_file(); // nombre de séquence de couleurs dans le fichier secret_sequence.txt
 
-    FILE *file = fopen("/home/mahamat/COurs/S3/TEC_DEV/projet_master_mind/techdev-mastermind-tanou_ahamat/src/secret_sequence.txt", "r");
+    FILE *file = fopen("src/secret_sequence.txt", "r");
     if (file == NULL) {
         printf("Erreur: L'ouverture du fichier n'a pas réussi.\n");
         exit(0);
