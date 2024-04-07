@@ -8,6 +8,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
 /**
  * \brief Retourne le nombre de couleur présente et bien placée
@@ -24,5 +25,6 @@ int brocheNoir(char ser[], char sequence[]);
  * \return Entier Le nombre de couleur presente mais mal placés
 */
 int brocheBlanche(char secret[], char sequence[]);
+
 
 #endif
