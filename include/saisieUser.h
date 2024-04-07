@@ -1,5 +1,5 @@
 /**
-  * \file saisi_utilisateur.h
+  * \file saisieUser.h
   * \brief Contient le prototype de la fonction qui permet au joueur d'entrez une sequence de couleurs
 */
 

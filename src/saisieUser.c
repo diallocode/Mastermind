@@ -1,5 +1,5 @@
 /**
- * \file saisi_utilisateur.c
+ * \file saisieUser.c
  * \brief Contient le code de la fonction qui permet au joueur d'entrez une sequence de couleurs
 */
 
