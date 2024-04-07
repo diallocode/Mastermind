@@ -8,6 +8,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include<stdbool.h>
 
 /**
  * \brief Retourne le nombre de couleur présente et bien placée
