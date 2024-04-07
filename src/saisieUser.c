@@ -32,13 +32,13 @@ void saisir_sequence_couleurs(bool niveau, char saisie_user[]){
                 if(double_couleur(saisie_user)){ 
                     print_color_text("\nSaisie Erronée:\n", 'R');
                     print_color_text("- séquence incorrecte, y a des doublons et des couleurs inconnues\n", 'R');
-                    print_color_text("- Veuillez saisir 4 couleurs qui correspondent aux lettres ci-hautes\n", 'R');
+                    print_color_text("- Veuillez saisir 4 couleurs qui correspondent aux lettres ci-dessous\n", 'R');
                 }
 
                 else{
                     print_color_text("\nSaisie Erronée:\n", 'R');
                     print_color_text("- séquence incorrecte, y a des couleurs inconnues\n", 'R');
-                    print_color_text("- Veuillez saisir 4 couleurs qui correspondent aux lettres ci-hautes\n", 'R');
+                    print_color_text("- Veuillez saisir 4 couleurs qui correspondent aux lettres ci-dessous\n", 'R');
                 }
             }
         }
@@ -47,7 +47,7 @@ void saisir_sequence_couleurs(bool niveau, char saisie_user[]){
         {
             if(!est_saisie_valide(saisie_user, niveau)){
                 print_color_text("- séquence incorrecte, y a des couleurs inconnues\n", 'R');
-                print_color_text("- Veuillez saisir 4 couleurs qui correspondesnt aux lettres ci-hautes\n", 'R');
+                print_color_text("- Veuillez saisir 4 couleurs qui correspondesnt aux lettres ci-dessous\n", 'R');
             }
         }
 
