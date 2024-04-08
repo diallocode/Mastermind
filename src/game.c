@@ -85,7 +85,7 @@ bool game(char secret_sequence[], char user_sequence[]){
             cheville_blanche[i] = brocheBlanche(secret_sequence, user_sequence);
             strcpy(sequences[i], user_sequence);
             geusses[i] = guess;
-
+            system("clear");
             printf("| guess # | guess | result               |\n");
             printf("| ------- | ----- | -------------------- |\n");
             for (int j = 0; j <= i; j++)
